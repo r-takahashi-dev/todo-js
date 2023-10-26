@@ -1,6 +1,8 @@
 import "./styles.css";
 
+//const onClickAdd = (e) => {
 const onClickAdd = () => {
+    //console.log(e);
     // テキストボックスの値を取得し、初期化する
     const inputText = document.getElementById("add-text").value;
     document.getElementById("add-text").value = "";
@@ -20,4 +22,7 @@ const onClickAdd = () => {
     document.getElementById("incomplete-list").appendChild(div);
 }
 
+//document.getElementById("add-button").addEventListener("click", (e) => onClickAdd(e));
 document.getElementById("add-button").addEventListener("click", () => onClickAdd());
+//↓こっちの書き方でもonClickAdd関数を呼び出せる
+//document.getElementById("add-button").addEventListener("click", onClickAdd);
